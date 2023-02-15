@@ -19,7 +19,7 @@ INSERT INTO Products VALUES
 (14, "Index Cards Pack of 300", 150, 6, "School Supplies"),
 (15, "Individual Pens Overstock", 75, 1, "Pen");
 
---Display the Database Ordered By Price
+--Display the database ordered by price
 SELECT * FROM Products ORDER By Price;
 
 --What is the total number of products in the store?
