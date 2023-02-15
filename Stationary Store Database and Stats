@@ -1,0 +1,29 @@
+--Create a Stationary Store Database
+
+CREATE TABLE Products (id INTEGER PRIMARY KEY, Name TEXT, Quantity INTEGER, Price INTEGER, Type TEXT);
+
+INSERT INTO Products VALUES 
+(1, ".5 Rollerball Pen", 100, 3, "Pen"),
+(2, ".7 Rollerball Pen", 150, 5, "Pen"),
+(3, "1.0 Rollerball Pen", 100, 7, "Pen"),
+(4, ".7 Rollerball Assorted Pen Pack of 5", 200, 10, "Pen"),
+(5, "Spiral Notebook 100 Pages", 200, 3, "Notebook"),
+(6, "Spiral Notebook 5 Subject", 300, 7, "Notebook"),
+(7, "Composition Notebook 100 Pages", 200, 3, "Notebook"),
+(8, "Hard Cover Journal", 150, 7, "Journal"),
+(9, "Soft Cover Journal", 150, 5, "Journal"),
+(10, "Highlighter Pack of 3", 200, 5, "School Supplies"),
+(11, "Highlighter Pack of 5", 200, 7, "School Supplies"),
+(12, "Highlighter Assorted Pack of 5", 300, 10, "School Supplies"),
+(13, "Index Cards Pack of 100", 300, 3, "School Supplies"),
+(14, "Index Cards Pack of 300", 150, 6, "School Supplies"),
+(15, "Individual Pens Overstock", 75, 1, "Pen");
+
+--Display the Database Ordered By Price
+SELECT * FROM Products ORDER By Price;
+
+--What is the total number of products in the store?
+SELECT SUM(Quantity) From Products;
+
+--What is the average price of products under school supplies?
+SELECT AVG(Price) From Products WHERE Type = "School Supplies";
