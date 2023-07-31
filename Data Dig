@@ -1,3 +1,4 @@
+--Query the Dataset to discover things about the data
 Data Dig
 
 /* Marvel Heroes and Villains
@@ -49,11 +50,12 @@ INSERT INTO marvels VALUES(24, "Venon", 78, "Neutral", "Male", 1.90, 118, "EUA",
 INSERT INTO marvels VALUES(25, "Juggernaut", 76, "Neutral", "Male", 2.87, 862, "EUA", 2, 7, 2, 7, 1, 4);
 INSERT INTO marvels VALUES(26, "Professor X", 58, "Good", "Male", 1.83, 86, "EUA", 5, 2, 2, 2, 5, 3);
 
---
+--Use aggregate functions to compute the Minimum, Maximum, and Average values of Height
 SELECT MIN (height_m) AS SmallestHeight FROM marvels;
 SELECT MAX (height_m) AS BiggestHeight FROM marvels;
 SELECT AVG (height_m) AS AverageHeight FROM marvels;
 
+******--Use aggregate functions with HAVING to determine the Count of marvel characters who are Good, Bad, and Neutral and their corresponding Popularity
 SELECT COUNT(popularity), alignment
 FROM marvels
 GROUP BY alignment
