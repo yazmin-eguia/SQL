@@ -62,7 +62,7 @@ GROUP BY alignment
 HAVING popularity
 ORDER BY alignment;
 
-
+*******----Using CASE to group data values that do not yet exist
 SELECT fighting_Skills,
 CASE
     WHEN fighting_Skills > 4 THEN "High fighting skills"
@@ -71,5 +71,6 @@ CASE
 END AS FightingText
 FROM marvels;
 
+--------Using AND to filter the data to show the number of marvel characters with strength great than 5 AND fighting skills greater than 4
 SELECT strength, fighting_Skills FROM marvels
 WHERE strength > 5 AND fighting_Skills > 4;
